@@ -2,8 +2,8 @@ const mineflayer = require('mineflayer');
 const { SocksProxyAgent } = require('socks-proxy-agent');
 
 // بيانات البروكسي الخاصة بك من Webshare
-const PROXY_HOST = '31.59.20.176';
-const PROXY_PORT = 6754;
+const PROXY_HOST = '45.38.107.97';
+const PROXY_PORT = 6014;
 const PROXY_USER = 'qaecbwyu';
 const PROXY_PASS = 'ppgniaqlqbtv';
 
