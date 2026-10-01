@@ -3,25 +3,29 @@ const mineflayer = require('mineflayer');
 function createBot() {
   const bot = mineflayer.createBot({
     host: 'crack.restcraft.net',
-    username: 'LLLLL',
+    username: 'LLLLLL',
     version: false
   });
 
   bot.on('login', () => {
-    console.log('تم دخول البوت بنجاح!');
+    console.log('Bot logged in successfully!');
   });
 
   bot.on('spawn', () => {
+    console.log('Bot spawned in the world.');
     setTimeout(() => {
       bot.chat('/login MERCI');
-    }, 3000);
+    }, 2000);
+  });
+
+  bot.on('error', err => {
+    console.log('Bot error:', err);
   });
 
   bot.on('end', () => {
+    console.log('Bot disconnected, reconnecting in 5 seconds...');
     setTimeout(createBot, 5000);
   });
-
-  bot.on('error', err => console.log(err));
 }
 
 createBot();
